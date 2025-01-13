@@ -64,8 +64,6 @@
                     <li><strong>Algorithm Visualization:</strong> See algorithms come to life with real-time animations.</li>
                 </ul>
             </div>
-
-
         </div>
 
         <div class="grid-item footer">
