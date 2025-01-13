@@ -1,0 +1,227 @@
+* {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: lighter;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.header h1 {
+    text-align: left;
+    font-size: 48px;
+    margin-left: 200px ;
+}
+
+.header button {
+    padding: 8px 16px;
+    width: 100px;
+    margin-right: 200px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #414141;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.header button:hover {
+    background-color: #ffffff; /* Darker background color */
+    color: #000000; /* Change text color */
+    border: 2px solid #000000; /* Change border color */
+    transform: scale(1.05); /* Slight scale-up effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+
+.main-container {
+    grid-area: main;
+    position: relative; /* Make this the reference for absolute positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000; /* Text color */
+    font-family: "Inria Sans", sans-serif;
+}
+.background-heading {
+    position: relative; /* Allows the background to be positioned within the <h1> */
+    background-size: cover; /* Makes the image cover the text area */
+    color: #000000; /* Adjusts the text color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Enhances text readability */
+    padding: 16px 32px; /* Adds padding around the text */
+    margin: 8px 0; /* Spacing between <h1> elements */
+    font-size: 2rem; /* Font size for headings */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+
+
+#background {
+    position: absolute; /* Allows precise positioning within .main-container */
+    bottom: 1000px; /* Adjusts vertical position */
+    left: 0; /* Ensures it starts from the left edge */
+    right: 0; /* Ensures it spans the width */
+    height: 500px; /* Set height for the background */
+    background-size: cover; /* Ensures the image scales properly */
+    z-index: 0; /* Places it behind the text */
+    opacity: 0.6; /* Optional: Makes the background semi-transparent */
+}
+#background image {
+    height: 100%;
+    width: 100%;
+}
+
+.main-container h1 {
+    font-size: 4rem;
+}
+
+/* Flexbox wrapper for aligning rows */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.Motto h2{
+    font-size: 2rem;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: bolder;
+}
+.Motto{
+    gap: 0;
+}
+.content-row {
+    display: flex;
+    align-items: center; /* Vertically aligns images and text */
+    justify-content: center; /* Centers the row */
+}
+
+/* Image styling */
+.left-image {
+    margin-right: 0; /* Adds spacing between the image and text */
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.right-image {
+    margin-left: 0; /* Adds spacing between the text and image */
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+#getStarted {
+    padding: 12px 24px; /* Adds comfortable padding */
+    font-size: 1.2rem; /* Increases font size for better visibility */
+    font-weight: bold; /* Makes the text stand out */
+    color: #ffffff; /* White text */
+    background-color: #28b006; /* Attractive blue background */
+    border: none; /* Removes border */
+    border-radius: 8px; /* Smooth corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Adds smooth animation effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+#getStarted:hover {
+    background-color: #1c7602; /* Darker blue for hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+#getStarted:active {
+    transform: translateY(1px); /* Button presses down slightly */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+}
+
+/* About Section Styling */
+
+.about-section{
+    margin-top: 100px;
+}
+
+.about-section h2{
+    font-size: 3rem;
+}
+
+.courses-section{
+    margin-top: 100px;
+}
+
+.courses-section h2{
+    font-size: 3rem;
+}
+
+.about-section p {
+    font-size: 1.2rem; /* Consistent font size */
+    color: #333333; /* Neutral and readable text color */
+    line-height: 1.8; /* Better line spacing for readability */
+    margin: 0 auto; /* Centers the paragraph */
+    max-width: 800px; /* Restricts content width */
+    text-align: justify; /* Neat alignment for longer content */
+    background-color: #ffffff; /* Light background for contrast */
+    padding: 16px; /* Adds padding inside the text box */
+    border: 1px solid #ddd; /* Subtle border for structure */
+    border-radius: 6px; /* Rounded edges for smooth appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+/* Courses Section List Styling */
+.courses-section ul {
+    list-style: none; /* Removes default bullet points */
+    margin: 16px auto; /* Centers the list */
+    padding: 0; /* Removes default padding */
+    max-width: 800px; /* Restricts width */
+}
+
+.courses-section ul li {
+    font-size: 1.2rem; /* Matches paragraph font size */
+    color: #444444; /* Slightly darker text */
+    margin: 12px 0; /* Spacing between list items */
+    padding: 10px 16px; /* Padding inside list items */
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Aligns content inside list item */
+    align-items: center; /* Vertically centers content */
+}
+
+.courses-section ul li::before {
+    content: "✔"; /* Adds a checkmark before each item */
+    color: #28b006; /* Matches the "Get Started" button */
+    font-size: 1.4rem; /* Slightly larger for prominence */
+    margin-right: 12px; /* Space between checkmark and text */
+}
+
+
+
+.footer {
+    grid-area: footer;
+    font-size: 1rem;
+    font-style: italic;
+}
