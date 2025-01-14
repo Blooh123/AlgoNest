@@ -45,6 +45,9 @@
                     <h1 class="background-heading">Master</h1>
                 </div>
             </div>
+
+
+
             <div class="Motto">
                 <h2><strong>Welcome to AlgoNest!</strong></h2>
                 <h3>"Where Algorithms Take Flight"</h3>
