@@ -47,6 +47,7 @@ h1:hover, h2:hover, h3:hover {
 
 /* From Uiverse.io by Galahhad */
 .ui-btn {
+    display: none;
     --btn-default-bg: rgb(255, 255, 255);
     --btn-padding: 15px 20px;
     --btn-hover-bg: rgb(255, 255, 255);

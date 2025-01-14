@@ -159,7 +159,7 @@ input:focus + label, input:not(:placeholder-shown) + label {
 /* Submit Button */
 input[type="submit"] {
     background-color: #28b006;
-    width: 100%;
+    width: 100% ;
     color: white;
     border: none;
     border-radius: 5px;
