@@ -12,15 +12,24 @@
     <title>AlgoNest</title>
 </head>
 <body>
-    <div class = "grid-container">
-        <div class = "grid-item header">
-            <h1>AlgoNest🔥</h1>
-            <button class="ui-btn">
-              <span>
-                Log In
-              </span>
-            </button>
+        <div id="loading-overlay">
+            <svg viewBox="0 0 240 240" height="240" width="240" class="pl">
+                <circle stroke-linecap="round" stroke-dashoffset="-330" stroke-dasharray="0 660" stroke-width="20" stroke="#000" fill="none" r="105" cy="120" cx="120" class="pl__ring pl__ring--a"></circle>
+                <circle stroke-linecap="round" stroke-dashoffset="-110" stroke-dasharray="0 220" stroke-width="20" stroke="#000" fill="none" r="35" cy="120" cx="120" class="pl__ring pl__ring--b"></circle>
+                <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#000" fill="none" r="70" cy="120" cx="85" class="pl__ring pl__ring--c"></circle>
+                <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#000" fill="none" r="70" cy="120" cx="155" class="pl__ring pl__ring--d"></circle>
+            </svg>
         </div>
+    <div class = "grid-container">
+        <div class="grid-item header">
+            <h1>AlgoNest🔥</h1>
+            <form action="App/LogIn.php" method="POST">
+                <button class="ui-btn" type="submit">
+                    <span>Log In</span>
+                </button>
+            </form>
+        </div>
+
 
         <div class="grid-item main-container">
             <div id="particles-js"></div>
@@ -96,6 +105,24 @@
 
 
     </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            // Prevent form from submitting immediately
+            e.preventDefault();
+
+            // Show the loading overlay
+            document.getElementById('loading-overlay').style.display = 'flex';
+
+            // Simulate a short delay (e.g., 2 seconds)
+            setTimeout(function() {
+                // Submit the form after the delay
+                e.target.submit();
+            }, 2000); // 2000ms = 2 seconds
+        });
+
+    </script>
+        
+
 
 </body>
 </html>
